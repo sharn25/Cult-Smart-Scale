@@ -255,8 +255,8 @@ class CultScaleBatterySensor(CultScaleBaseSensor):
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, self.mac)},
             name=DEFAULT_SCALE_NAME,
-            manufacturer="Cult / Lefu",
-            model="Cult Smart Scale (CF)",
+            manufacturer="Cult",
+            model="Cult Smart Scale",
         )
 
     @property
@@ -422,7 +422,7 @@ class CultPersonMetricSensor(CoordinatorEntity[CultScaleDataUpdateCoordinator], 
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, f"{self.mac}_{user.user_id}")},
             name=f"Cult Scale — {user.name}",
-            manufacturer="Cult / Lefu",
+            manufacturer="Cult",
             model="Cult Smart Scale User Profile",
             via_device=(DOMAIN, self.mac),
         )

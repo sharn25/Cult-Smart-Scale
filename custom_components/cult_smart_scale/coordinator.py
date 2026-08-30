@@ -47,13 +47,13 @@ from .const import (
     CONF_USER_NAME,
     CONF_USERS,
     CONF_WEIGHT_TOLERANCE,
+    CULT_SCALE_MANUFACTURER_ID,
     DEFAULT_IMPEDANCE_TOLERANCE,
     DEFAULT_WEIGHT_TOLERANCE,
     DOMAIN,
     EVENT_READING_RECEIVED,
     EVENT_UNASSIGNED_READING,
     HEART_RATE_TIMEOUT,
-    LEFU_MANUFACTURER_ID,
     MATCHING_MODE_AUTO,
     SCALE_NOTIFY_CHAR_UUID,
 )
@@ -180,7 +180,7 @@ class CultScaleDataUpdateCoordinator(DataUpdateCoordinator[None]):
         )
 
         # Check manufacturer data for broadcast live weight (both hex 0xFF50 and decimal 65360)
-        m_data = adv_data.manufacturer_data.get(LEFU_MANUFACTURER_ID) or adv_data.manufacturer_data.get(65360)
+        m_data = adv_data.manufacturer_data.get(CULT_SCALE_MANUFACTURER_ID) or adv_data.manufacturer_data.get(65360)
         if m_data:
             if len(m_data) >= 17:
                 scale_frame = m_data[6:17]

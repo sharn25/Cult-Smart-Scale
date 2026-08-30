@@ -1,6 +1,5 @@
 """
 Body Composition Calculation Engine for Cult Smart Scale.
-Reverse-engineered from Lefu / BestHealth / PPScale (CF Type) native libraries.
 """
 
 from __future__ import annotations
@@ -68,7 +67,6 @@ def verify_checksum(packet: bytes) -> bool:
 def decode_impedance(enc: int) -> int:
     """
     Decodes 24-bit encoded bioimpedance to resistance in Ohms.
-    Reverse-engineered from BestHealth / LeFu Bh11DecodeImpedance algorithm.
     """
     if enc in (0, 0xFFFFFF):
         return 0
@@ -89,8 +87,7 @@ def calculate_body_composition(
     user: Optional[UserProfile] = None,
 ) -> Dict[str, Any]:
     """
-    Computes full body composition parameters using reverse-engineered
-    LeFu / BestHealth / PPScale BIA algorithms.
+    Computes full body composition parameters for Cult Smart Scale.
     """
     p = profile or user
     if p is None:

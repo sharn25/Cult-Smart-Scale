@@ -31,11 +31,11 @@ from .const import (
     CONF_USER_NAME,
     CONF_USERS,
     CONF_WEIGHT_TOLERANCE,
+    CULT_SCALE_MANUFACTURER_ID,
     DEFAULT_IMPEDANCE_TOLERANCE,
     DEFAULT_SCALE_NAME,
     DEFAULT_WEIGHT_TOLERANCE,
     DOMAIN,
-    LEFU_MANUFACTURER_ID,
     MATCHING_MODE_AUTO,
     MATCHING_MODE_MANUAL,
     SCALE_SERVICE_UUID,
@@ -143,7 +143,7 @@ class CultScaleConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             if (
                 DEFAULT_SCALE_NAME.lower() in name.lower()
                 or SCALE_SERVICE_UUID.lower() in [s.lower() for s in adv.service_uuids]
-                or LEFU_MANUFACTURER_ID in adv.manufacturer_data
+                or CULT_SCALE_MANUFACTURER_ID in adv.manufacturer_data
                 or 65360 in adv.manufacturer_data
             ):
                 discovered[mac] = f"{name or DEFAULT_SCALE_NAME} ({mac})"
