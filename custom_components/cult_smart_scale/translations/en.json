@@ -1,0 +1,96 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Cult Smart Scale",
+        "description": "Select your discovered Cult Smart Scale or enter its MAC address.",
+        "data": {
+          "mac": "Cult Smart Scale / Bluetooth MAC",
+          "name": "Scale Name",
+          "matching_mode": "Logging & Matching Mode"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Discovered Cult Smart Scale",
+        "description": "Do you want to add the discovered Cult Smart Scale ({name} - {mac}) to Home Assistant?",
+        "data": {
+          "name": "Scale Name",
+          "matching_mode": "Logging & Matching Mode"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This Cult Smart Scale is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cult Smart Scale Options",
+        "description": "Manage household person profiles and configure logging behavior.",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "global_settings": {
+        "title": "Logging & Matching Mode Settings",
+        "description": "Choose whether weight readings are assigned automatically based on weight and impedance thresholds, or manually via mobile notifications.",
+        "data": {
+          "matching_mode": "Logging & Matching Mode"
+        }
+      },
+      "user_profile": {
+        "title": "Add Person Profile",
+        "description": "Configure body composition parameters and threshold window for a household member.",
+        "data": {
+          "name": "Member Name",
+          "person_entity": "Linked Home Assistant Person Entity",
+          "height": "Height (cm)",
+          "age": "Age (years)",
+          "gender": "Gender",
+          "target_weight": "Baseline / Expected Weight (kg)",
+          "weight_tolerance": "Weight Tolerance (± kg)",
+          "target_impedance": "Baseline Impedance (Ω, Optional)",
+          "impedance_tolerance": "Impedance Tolerance (± Ω)",
+          "is_athlete": "Athlete Mode (high-intensity training)"
+        }
+      },
+      "select_user": {
+        "title": "Select Person Profile",
+        "description": "Choose a person profile to modify or remove.",
+        "data": {
+          "selected_user": "Person Profile",
+          "remove": "Remove this profile"
+        }
+      },
+      "edit_user": {
+        "title": "Edit Person Profile",
+        "description": "Update parameters and thresholds for this member.",
+        "data": {
+          "name": "Member Name",
+          "person_entity": "Linked Home Assistant Person Entity",
+          "height": "Height (cm)",
+          "age": "Age (years)",
+          "gender": "Gender",
+          "target_weight": "Baseline / Expected Weight (kg)",
+          "weight_tolerance": "Weight Tolerance (± kg)",
+          "target_impedance": "Baseline Impedance (Ω, Optional)",
+          "impedance_tolerance": "Impedance Tolerance (± Ω)",
+          "is_athlete": "Athlete Mode"
+        }
+      }
+    }
+  },
+  "services": {
+    "assign_reading": {
+      "name": "Assign Scale Reading",
+      "description": "Manually assigns the latest scale measurement to a specific person profile.",
+      "fields": {
+        "user_id": {
+          "name": "Person or User ID",
+          "description": "The name, User ID, or linked Home Assistant person entity."
+        }
+      }
+    }
+  }
+}

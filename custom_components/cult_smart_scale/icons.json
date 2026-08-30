@@ -1,0 +1,83 @@
+{
+  "entity": {
+    "sensor": {
+      "weight": {
+        "default": "mdi:scale-bathroom"
+      },
+      "bmi": {
+        "default": "mdi:calculator-variant-outline"
+      },
+      "body_fat": {
+        "default": "mdi:human-handsdown"
+      },
+      "body_fat_mass": {
+        "default": "mdi:human-handsdown"
+      },
+      "fat_free_mass": {
+        "default": "mdi:scale"
+      },
+      "muscle_mass": {
+        "default": "mdi:arm-flex"
+      },
+      "muscle_percentage": {
+        "default": "mdi:arm-flex-outline"
+      },
+      "skeletal_muscle": {
+        "default": "mdi:arm-flex"
+      },
+      "body_water": {
+        "default": "mdi:water-percent"
+      },
+      "water_mass": {
+        "default": "mdi:water"
+      },
+      "bone_mass": {
+        "default": "mdi:bone"
+      },
+      "protein": {
+        "default": "mdi:food-drumstick-outline"
+      },
+      "subcutaneous_fat": {
+        "default": "mdi:human-handsup"
+      },
+      "visceral_fat": {
+        "default": "mdi:circle-slice-8"
+      },
+      "bmr": {
+        "default": "mdi:fire"
+      },
+      "metabolic_age": {
+        "default": "mdi:calendar-account"
+      },
+      "ideal_weight": {
+        "default": "mdi:target"
+      },
+      "body_type": {
+        "default": "mdi:account-details"
+      },
+      "heart_rate": {
+        "default": "mdi:heart-pulse"
+      },
+      "last_weight": {
+        "default": "mdi:scale-bathroom"
+      },
+      "last_impedance": {
+        "default": "mdi:omega"
+      },
+      "last_heart_rate": {
+        "default": "mdi:heart-pulse"
+      },
+      "last_user": {
+        "default": "mdi:account-check"
+      },
+      "unassigned_weight": {
+        "default": "mdi:account-question"
+      }
+    }
+  },
+  "services": {
+    "assign_reading": {
+      "service": "mdi:account-arrow-right"
+    }
+  }
+}

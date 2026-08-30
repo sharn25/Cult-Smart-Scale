@@ -1,0 +1,11 @@
+assign_reading:
+  name: Assign Scale Reading
+  description: Manually assigns the latest scale measurement (weight, impedance, and heart rate) to a specific person profile, calculating and updating their personal body composition sensors.
+  fields:
+    user_id:
+      name: Person or User ID
+      description: The name, User ID, or linked Home Assistant person entity (e.g. person.sharan or sharan).
+      required: true
+      example: "person.sharan"
+      selector:
+        text:

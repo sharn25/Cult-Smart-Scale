@@ -1,0 +1,24 @@
+{
+  "domain": "cult_smart_scale",
+  "name": "Cult Smart Scale",
+  "bluetooth": [
+    {
+      "manufacturer_id": 65360
+    },
+    {
+      "service_uuid": "0000fff0-0000-1000-8000-00805f9b34fb"
+    },
+    {
+      "local_name": "Cult Smart Scale*"
+    }
+  ],
+  "codeowners": ["@sharn25"],
+  "config_flow": true,
+  "dependencies": ["bluetooth"],
+  "documentation": "https://github.com/sharn25/Cult-Smart-Scale",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/sharn25/Cult-Smart-Scale/issues",
+  "requirements": ["bleak-retry-connector>=3.5.0"],
+  "version": "1.0.0"
+}
